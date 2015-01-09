@@ -20,7 +20,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -87,3 +87,9 @@ setopt AUTO_CD
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Python Virtualenv Variables
+export WORKON_HOME=$HOME/dev/virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+export GOPATH=/Users/tpulmano/dev/repos/golang
