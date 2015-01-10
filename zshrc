@@ -93,3 +93,9 @@ export WORKON_HOME=$HOME/dev/virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 export GOPATH=/Users/tpulmano/dev/repos/golang
+
+# Android Settings
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
+
+# Dotfiles Script Directory
+PATH=$PATH:$HOME/dev/repos/dotfiles/bin
