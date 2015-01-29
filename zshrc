@@ -87,12 +87,17 @@ setopt AUTO_CD
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias mv='mv -i'
+alias cp='cp -i'
+alias rm='trash'
+
 
 # Python Virtualenv Variables
 export WORKON_HOME=$HOME/dev/virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 export GOPATH=/Users/tpulmano/dev/repos/golang
+export PATH=$PATH:$GOPATH/bin
 
 # Android Settings
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
