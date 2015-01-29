@@ -23,7 +23,7 @@ set number
 let g:go_disable_autoinstall = 0
 let g:neocomplete#enable_at_startup = 1
 
-colorscheme molokai
+colorscheme molokai_nobg
 
 
 " Go TagBar stuff
