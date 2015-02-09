@@ -96,7 +96,7 @@ alias rm='trash'
 export WORKON_HOME=$HOME/dev/virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-export GOPATH=/Users/tpulmano/dev/repos/golang
+export GOPATH=$HOME/dev/repos/golang
 export PATH=$PATH:$GOPATH/bin
 
 # Android Settings
