@@ -1,0 +1,22 @@
+Install brew
+
+Install zsh
+http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/
+
+Install oh-my-zsh
+curl -L http://install.ohmyz.sh | sh
+
+Use my zshrc
+ln -s ~/dev/repos/dotfiles/zshrc ~/.zshrc
+
+Install pip/virtualenv/virtualenvwrapper
+pip install virtualenv virtualenvwrapper
+
+Use vimrc
+ln -s ~/dev/repos/dotfiles/vimrc ~/.vimrc
+
+Use vim
+ln -s ~/dev/repos/dotfiles/vim ~/.vim
+
+Install Vim-Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
