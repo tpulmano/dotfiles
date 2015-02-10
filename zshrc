@@ -90,6 +90,7 @@ setopt AUTO_CD
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='trash'
+alias qlf='qlmanage -p "$@" &> /dev/null'
 
 
 # Python Virtualenv Variables
