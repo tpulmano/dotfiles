@@ -90,7 +90,8 @@ setopt AUTO_CD
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='trash'
-alias qlf='qlmanage -p "$@" &> /dev/null'
+alias ql='qlmanage -p "$@" &> /dev/null'
+alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
 
 
 # Python Virtualenv Variables
