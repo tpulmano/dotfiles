@@ -101,8 +101,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 export GOPATH=$HOME/dev/repos/golang
 export PATH=$PATH:$GOPATH/bin
 
-# Android Settings
+# Android Settings and tools
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
+PATH=$PATH:$HOME/Library/Android/sdk/tools
 
 # Dotfiles Script Directory
 PATH=$PATH:$HOME/dev/repos/dotfiles/bin
