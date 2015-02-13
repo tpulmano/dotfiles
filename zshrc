@@ -103,6 +103,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # Android Settings and tools
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
+PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 PATH=$PATH:$HOME/Library/Android/sdk/tools
 
 # Dotfiles Script Directory
