@@ -106,5 +106,10 @@ export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 PATH=$PATH:$HOME/Library/Android/sdk/tools
 
+# tmuxifier 
+PATH=$PATH:$HOME/dev/repos/third/github.com/jimeh/tmuxifier/bin
+export TMUXIFIER_LAYOUT_PATH=$HOME/dev/repos/dotfiles/tmux-layouts
+eval "$(tmuxifier init -)"
+
 # Dotfiles Script Directory
 PATH=$PATH:$HOME/dev/repos/dotfiles/bin
