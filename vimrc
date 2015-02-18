@@ -12,7 +12,7 @@ set clipboard=unnamed
 "noremap <leader>y "*y
 "noremap <leader>yy "*Y
 " preserve indentation when pasting from the OSX clipboard
-"noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " OSX Backspace Key
 :set backspace=indent,eol,start
@@ -55,3 +55,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 nmap <F8> :TagbarToggle<CR>
+
+" HTML two spaces indentation
+autocmd FileType html :setlocal sw=2 ts=2 sts=2
