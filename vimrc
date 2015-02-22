@@ -58,3 +58,10 @@ nmap <F8> :TagbarToggle<CR>
 
 " HTML two spaces indentation
 autocmd FileType html :setlocal sw=2 ts=2 sts=2
+
+" CtrlP Mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/build/**
+set wildignore+=*.class
+
