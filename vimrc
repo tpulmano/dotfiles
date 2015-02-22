@@ -57,4 +57,10 @@ let g:tagbar_type_go = {
 nmap <F8> :TagbarToggle<CR>
 
 " HTML two spaces indentation
-autocmd FileType html :setlocal sw=2 ts=2 sts=2
+au FileType html :setlocal sw=2 ts=2 sts=2
+au FileType less :setlocal sw=2 ts=2 sts=2
+au FileType jsx  :setlocal sw=2 ts=2 sts=2
+au FileType js   :setlocal sw=2 ts=2 sts=2
+
+" Less CSS Highlighting
+au BufNewFile,BufRead *.less set filetype=css

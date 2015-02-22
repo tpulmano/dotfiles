@@ -21,6 +21,8 @@ ln -s ~/dev/repos/dotfiles/vim ~/.vim
 Install Vim-Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+Install Vim Plugins (CtrlP, neocomplete, tagbar, vim-go)
+
 Install Slate
 ln -s ~/dev/repos/dotfiles/slate ~/.slate
 
