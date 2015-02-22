@@ -64,3 +64,10 @@ au FileType js   :setlocal sw=2 ts=2 sts=2
 
 " Less CSS Highlighting
 au BufNewFile,BufRead *.less set filetype=css
+
+" CtrlP Mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/build/**
+set wildignore+=*.class
+
