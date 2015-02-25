@@ -66,8 +66,12 @@ au FileType js   :setlocal sw=2 ts=2 sts=2
 au BufNewFile,BufRead *.less set filetype=css
 
 " CtrlP Mappings
-let g:ctrlp_map = '<c-p>'
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/build/**
 set wildignore+=*.class
 
+" Folding (save folds)
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
