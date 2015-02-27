@@ -5,4 +5,5 @@
 # VIM Stuff
 vim/autoload
 vim/.netrwhist
+vim/view
 *.swp
