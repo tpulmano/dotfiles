@@ -21,7 +21,7 @@ ln -s ~/dev/repos/dotfiles/vim ~/.vim
 Install Vim-Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-Install Vim Plugins (CtrlP, neocomplete, tagbar, vim-go)
+Install Vim Plugins (CtrlP, neocomplete, tagbar, vim-go, ag)
 
 Install Slate
 ln -s ~/dev/repos/dotfiles/slate ~/.slate
@@ -29,3 +29,5 @@ ln -s ~/dev/repos/dotfiles/slate ~/.slate
 Install tmuxifier
 git clone https://github.com/jimeh/tmuxifier
 
+Install Ag
+brew install the_silver_seracher

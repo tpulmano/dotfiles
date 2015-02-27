@@ -1,32 +1,70 @@
-execute pathogen#infect()
+call pathogen#infect()
 
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set clipboard=unnamed
-
-"syntax on
-
+" OSX {{{
 " Yank text to the OSX clipboard
 "noremap <leader>y "*y
 "noremap <leader>yy "*Y
 " preserve indentation when pasting from the OSX clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-
+set clipboard=unnamedplus
 " OSX Backspace Key
 :set backspace=indent,eol,start
+" }}}
 
+" Spaces & Tabs {{{
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+" }}}
+
+" Syntax {{{
 syntax enable
 filetype plugin on
+" }}}
+
+" Display {{{
 set number
-let g:go_disable_autoinstall = 0
-let g:neocomplete#enable_at_startup = 1
+set showcmd
+set cursorline
+set wildmenu
+set lazyredraw
+set showmatch
+set incsearch
+set hlsearch
+" }}}
 
+" Colors {{{
 colorscheme molokai_nobg
+" }}}
 
+" Folding {{{
+nnoremap <space> za
+vnoremap <space> zf
+set foldmethod=indent
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+" }}}
 
-" Go TagBar stuff
+" Line Shortcuts {{{
+" Move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+" }}}
+
+" Leader {{{
+let mapleader=","
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>a :Ag
+" }}}
+
+" Plugin Vim-go {{{
+let g:go_disable_autoinstall = 0
+" }}}
+
+" Plugin TagBar {{{
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -55,23 +93,41 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 nmap <F8> :TagbarToggle<CR>
+" }}}
 
-" HTML two spaces indentation
-au FileType html :setlocal sw=2 ts=2 sts=2
-au FileType less :setlocal sw=2 ts=2 sts=2
-au FileType jsx  :setlocal sw=2 ts=2 sts=2
-au FileType js   :setlocal sw=2 ts=2 sts=2
-
-" Less CSS Highlighting
-au BufNewFile,BufRead *.less set filetype=css
-
-" CtrlP Mappings
+" Plugin CtrlP {{{
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 set wildignore+=*/build/**
 set wildignore+=*.class
+" }}}
 
-" Folding (save folds)
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+" Filetype specific settings {{{
+augroup configgroup
+    autocmd!
+
+    " HTML two spaces indentation
+    au FileType html :setlocal sw=2 ts=2 sts=2
+    au FileType less :setlocal sw=2 ts=2 sts=2
+    au FileType jsx  :setlocal sw=2 ts=2 sts=2
+    au FileType js   :setlocal sw=2 ts=2 sts=2
+    
+    " Less CSS Highlighting
+    au BufNewFile,BufRead *.less set filetype=css
+augroup END
+" }}}
+
+" Backups {{{
+set backup
+set backupdir=~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.tmp,~/tmp/var/tmp,tmp
+set writebackup
+" }}}
+
+set modelines=1
+" vim:foldmethod=marker:foldlevel=0
