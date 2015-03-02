@@ -6,7 +6,7 @@ call pathogen#infect()
 "noremap <leader>yy "*Y
 " preserve indentation when pasting from the OSX clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-set clipboard=unnamedplus
+set clipboard=unnamed
 " OSX Backspace Key
 :set backspace=indent,eol,start
 " }}}
@@ -46,6 +46,10 @@ set foldmethod=indent
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
+" }}}
+
+" Buffers {{{
+set confirm
 " }}}
 
 " Line Shortcuts {{{
@@ -107,17 +111,22 @@ set wildignore+=*.class
 " }}}
 
 " Filetype specific settings {{{
+" Obj-C
+autocmd FileType objc let g:alternateExtensions_h = "m" 
+autocmd FileType objc let g:alternateExtensions_m = "h"
 augroup configgroup
     autocmd!
 
     " HTML two spaces indentation
-    au FileType html :setlocal sw=2 ts=2 sts=2
-    au FileType less :setlocal sw=2 ts=2 sts=2
-    au FileType jsx  :setlocal sw=2 ts=2 sts=2
-    au FileType js   :setlocal sw=2 ts=2 sts=2
+    autocmd FileType html setlocal sw=2 ts=2 sts=2
+    autocmd FileType less setlocal sw=2 ts=2 sts=2
+    autocmd FileType js   setlocal sw=2 ts=2 sts=2
+    autocmd FileType jsx  setlocal shiftwidth=2
+    autocmd FileType jsx  setlocal tabstop=2
+    autocmd FileType jsx  setlocal softtabstop=2
     
     " Less CSS Highlighting
-    au BufNewFile,BufRead *.less set filetype=css
+    autocmd BufNewFile,BufRead *.less setlocal filetype=css
 augroup END
 " }}}
 
