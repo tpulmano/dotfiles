@@ -6,7 +6,7 @@ call pathogen#infect()
 "noremap <leader>yy "*Y
 " preserve indentation when pasting from the OSX clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-set clipboard=unnamedplus
+set clipboard=unnamed
 " OSX Backspace Key
 :set backspace=indent,eol,start
 " }}}
@@ -48,6 +48,10 @@ set foldlevelstart=10
 set foldnestmax=10
 " }}}
 
+" Buffers {{{
+set confirm
+" }}}
+
 " Line Shortcuts {{{
 " Move vertically by visual line
 nnoremap j gj
@@ -62,6 +66,8 @@ nnoremap <leader>a :Ag
 
 " Plugin Vim-go {{{
 let g:go_disable_autoinstall = 0
+let g:go_highlight_functions = 1
+let g:go_highlight_structs = 1
 " }}}
 
 " Plugin TagBar {{{
@@ -107,17 +113,22 @@ set wildignore+=*.class
 " }}}
 
 " Filetype specific settings {{{
+" Obj-C
+autocmd FileType objc let g:alternateExtensions_h = "m" 
+autocmd FileType objc let g:alternateExtensions_m = "h"
 augroup configgroup
     autocmd!
 
     " HTML two spaces indentation
-    au FileType html :setlocal sw=2 ts=2 sts=2
-    au FileType less :setlocal sw=2 ts=2 sts=2
-    au FileType jsx  :setlocal sw=2 ts=2 sts=2
-    au FileType js   :setlocal sw=2 ts=2 sts=2
+    autocmd FileType html setlocal sw=2 ts=2 sts=2
+    autocmd FileType less setlocal sw=2 ts=2 sts=2
+    autocmd FileType js   setlocal sw=2 ts=2 sts=2
+    autocmd FileType jsx  setlocal shiftwidth=2
+    autocmd FileType jsx  setlocal tabstop=2
+    autocmd FileType jsx  setlocal softtabstop=2
     
     " Less CSS Highlighting
-    au BufNewFile,BufRead *.less set filetype=css
+    autocmd BufNewFile,BufRead *.less setlocal filetype=css
 augroup END
 " }}}
 
