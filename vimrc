@@ -66,6 +66,8 @@ nnoremap <leader>a :Ag
 
 " Plugin Vim-go {{{
 let g:go_disable_autoinstall = 0
+let g:go_highlight_functions = 1
+let g:go_highlight_structs = 1
 " }}}
 
 " Plugin TagBar {{{
