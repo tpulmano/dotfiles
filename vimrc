@@ -112,6 +112,10 @@ set wildignore+=*/build/**
 set wildignore+=*.class
 " }}}
 
+" Plugin Vim-GitGutter {{{
+let g:gitgutter_enabled = 0
+" }}}
+
 " Filetype specific settings {{{
 " Obj-C
 autocmd FileType objc let g:alternateExtensions_h = "m" 
