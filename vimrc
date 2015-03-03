@@ -62,6 +62,7 @@ nnoremap k gk
 let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>a :Ag
+nnoremap <leader>g :GitGutterToggle<CR>
 " }}}
 
 " Plugin Vim-go {{{
