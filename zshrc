@@ -45,7 +45,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime osx)
+plugins=(git sublime osx extract)
 
 # User configuration
 
@@ -92,6 +92,7 @@ alias cp='cp -i'
 alias rm='trash'
 alias ql='qlmanage -p "$@" &> /dev/null'
 alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
+dash() {open dash://"$*"}
 
 
 # Python Virtualenv Variables
