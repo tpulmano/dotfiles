@@ -93,6 +93,7 @@ alias rm='trash'
 alias ql='qlmanage -p "$@" &> /dev/null'
 alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
 dash() {open dash://"$*"}
+unalias gstd
 
 
 # Python Virtualenv Variables
